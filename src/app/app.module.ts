@@ -7,6 +7,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { TwitterConnect } from '@ionic-native/twitter-connect';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
+
+import { environment } from "../environments/enviroment";
+import { AuthProvider } from "../providers/auth";
+import { auth } from 'firebase';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -14,7 +23,9 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -24,6 +35,8 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
+    TwitterConnect,
+    AngularFireAuth, 
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

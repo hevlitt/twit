@@ -11,6 +11,8 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <preference name="TwitterConsumerKey" value="IzXwYiYoPRz6UF3FH2V6VWCg5" />
+    <preference name="TwitterConsumerSecret" value="yV8WIkBh4sN3rW96ZtMVpN2fXcJpY2pfaryZ7fMJmv8U4IhGl3" />
     <preference name="ScrollEnabled" value="false" />
     <preference name="android-minSdkVersion" value="19" />
     <preference name="BackupWebStorage" value="none" />
@@ -81,4 +83,8 @@
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="1.1.19" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="2.0.5" />
+    <plugin name="twitter-connect-plugin" spec="^0.6.0">
+        <variable name="FABRIC_KEY" value="d88c52bf4ec41edb5c2698f94d376db0d2171590" />
+    </plugin>
+    <engine name="browser" spec="~5.0.3" />
 </widget>
